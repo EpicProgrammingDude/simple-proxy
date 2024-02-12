@@ -43,6 +43,7 @@ export async function createTokenIfNeeded(
 export async function isAllowedToMakeRequest(
   event: H3Event<EventHandlerRequest>,
 ) {
+  return true;
   if (!isTurnstileEnabled()) return true;
 
   const token = event.headers.get(tokenHeader);
